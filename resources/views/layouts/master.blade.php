@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>My - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Dashboard <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">My Dashboard</div>
             </a>
 
             <!-- Divider -->
@@ -48,12 +48,10 @@
                     <span>Category</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/posts">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Post</span></a>
-            </li>
-
-            
+              <a class="nav-link" href="/posts">
+                  <i class="fas fa-fw fa-tachometer-alt"></i>
+                  <span>Post</span></a>
+          </li>
 
         </ul>
         <!-- End of Sidebar -->
@@ -270,9 +268,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                  @yield(‘content’)
-
+                  @yield('content')
                 </div>
                 <!-- /.container-fluid -->
 
@@ -314,7 +310,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="{{url('logout')}}">Logout</a>
                 </div>
             </div>
         </div>
