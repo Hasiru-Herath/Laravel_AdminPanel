@@ -33,6 +33,8 @@ Route::group([
     Route::get('/edit/{id}', [CategoryController::class, 'edit']);
     Route::post('/update/{id}', [CategoryController::class, 'update']);
 
+    Route::get('/delete/{id}', [CategoryController::class, 'destroy']);
+
   
   });
 
