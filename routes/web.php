@@ -1,4 +1,6 @@
 <?php
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DashboardController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +17,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-use App\Http\Controllers\DashboardController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('register', [RegisterController::class, 'register']);
